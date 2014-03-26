@@ -13,11 +13,19 @@ function loadMainPage()
 			//html += '<div class="circle-text" onclick="loadProductListPage();"><div><small>Products</small></div></div>';
 			//html += '<div class="circle-text" onclick="loadClientsPage();"><div><small>Clients</small></div></div>';
 			//html += '<div class="circle-text" onclick="loadContactPage();"><div><small>Contact Us</small></div></div>';
-			html += '<span class="label label-danger curHand" onclick="loadHomePage();">&nbsp;&nbsp;&nbsp;Home&nbsp;&nbsp;&nbsp;</span><BR><BR>';
-			html += '<span class="label label-danger curHand" onclick="loadAboutPage();">&nbsp;About Us&nbsp;</span><BR><BR>';
-			html += '<span class="label label-danger curHand" onclick="loadProductListPage();">&nbsp;Products&nbsp;</span><BR><BR>';
-			html += '<span class="label label-danger curHand" onclick="loadClientsPage();">&nbsp;&nbsp;&nbsp;Clients&nbsp;&nbsp;</span><BR><BR>';
-			html += '<span class="label label-danger curHand" onclick="loadContactPage();">Contact Us</span>';			
+			
+			//html += '<span class="label label-danger curHand" onclick="loadHomePage();">&nbsp;&nbsp;&nbsp;Home&nbsp;&nbsp;&nbsp;</span><BR><BR>';
+			//html += '<span class="label label-danger curHand" onclick="loadAboutPage();">&nbsp;About Us&nbsp;</span><BR><BR>';
+			//html += '<span class="label label-danger curHand" onclick="loadProductListPage();">&nbsp;Products&nbsp;</span><BR><BR>';
+			//html += '<span class="label label-danger curHand" onclick="loadClientsPage();">&nbsp;&nbsp;&nbsp;Clients&nbsp;&nbsp;</span><BR><BR>';
+			//html += '<span class="label label-danger curHand" onclick="loadContactPage();">Contact Us</span>';			
+
+			html += '<div class="rectangle-box" onclick="loadHomePage();"><div class="rectangle-content"><div><span>Home</span></div></div></div><BR>';
+			html += '<div class="rectangle-box" onclick="loadAboutPage();"><div class="rectangle-content"><div><span>About Us</span></div></div></div><BR>';
+			html += '<div class="rectangle-box" onclick="loadProductListPage();"><div class="rectangle-content"><div><span>Products</span></div></div></div><BR>';
+			html += '<div class="rectangle-box" onclick="loadClientsPage();"><div class="rectangle-content"><div><span>Clients</span></div></div></div><BR>';
+			html += '<div class="rectangle-box" onclick="loadContactPage();"><div class="rectangle-content"><div><span>Contact Us</span></div></div></div><BR>';
+
 		html += '</div>';
 	html += '</div>';
 
@@ -58,7 +66,7 @@ function loadAboutPage()
 	html += '2013 - Started Manufacture of IND Number Plates and Embossing & Hot Stamping Machines<BR>';
 	html += '2013 - Started Marketing of Car care products in the Brand Name Of TEDI<BR><BR>';
 
-	html += '<b>History of Company</b><BR><BR>The Company was started by Mr.Elumalai,Bsc. S.Sundar In the year 2012, the company forayed into trading business by taking the distributorship of building products division of 3M India Ltd under the name of new partnership firm \'Shri Sabareesh Enterprises\'.<BR><BR>The company handled the products from the IND Number Plates, TEDI Car care Products, Vehicle Conspicuity of 3M, AFT of 3M, Speed Govenors (Mercyda & craysol). IND Number Plates.';
+	html += '<b>History of Company</b><BR><BR>The Company was started by Mr.Elumalai,Bsc. S.Sundar In the year 2012, the company forayed into trading business by taking the distributorship of building products division of 3M India Ltd under the name of new partnership firm \'Shri Sabareesh Enterprises\'.<BR><BR>The company handled the products from the IND Number Plates, TEDI Car care Products, Vehicle Conspicuity of 3M, AFT of 3M, Speed Govenors (Mercyda & craysol). IND Number Plates.<BR>';
 
 	document.getElementById('backButton').style.display = '';
 	document.getElementById('hiddenCurrentPageID').value = 2;
@@ -104,7 +112,7 @@ function loadProductsPage(productID)
 	if(productID == 1)
 	{
 		html += '<div class="row"><div class="col-xs-12"><p class="lead redColor">IND Number Plate</p></div></div>';
-		html += '<div class="row"><div class="col-xs-3"><img src="http://www.tediindia.com/images/ind2.jpg" width="50" height="50" /></div><div class="col-xs-39"><p>Windshield The professional aluminium based vehicle number plate manufacturer in south India. We are the manufactures of BLANK NUMBER PLATES, IND NUMBER PLATES, ALUMINIUM EMBOSSED NUMBER PLATES, MACHINES, HOT STAMPING FOILS, HOT STAMPING MACHINE, hYDRAULIC PRESS, CLAPPER DIES etc.</p></div>';
+		html += '<div class="row"><div class="col-xs-12"><p>Windshield The professional aluminium based vehicle number plate manufacturer in south India. We are the manufactures of BLANK NUMBER PLATES, IND NUMBER PLATES, ALUMINIUM EMBOSSED NUMBER PLATES, MACHINES, HOT STAMPING FOILS, HOT STAMPING MACHINE, hYDRAULIC PRESS, CLAPPER DIES etc.</p></div></div>';
 		html += '<div class="row">';
 			html += '<div class="col-xs-12">';
 				html += '<p>HSRP FORM AND MANNER OF DISPLAY OF REGISTRATION MARKS ON THE MOTOR VEHICLES (AS PER PROVISIONS U/S 50 CMVR, 1989) :</p>';
@@ -114,12 +122,12 @@ function loadProductsPage(productID)
 		html += '<div class="row">';
 			html += '<div class="col-xs-12">';
 				html += '<ul>';
-					html += '<li>The plate shall be a solid unit made of 1.0 mm aluminum conforming to DIN 1745 / DIN 1783 or ISO 7591.</li>';
-					html += '<li>Border edges and corners of the plate shall be rounded to avoid injuries to the extent of approx.10 mm and the plates must have an embossed border.</li>';
-					html += '<li>The plate has to be suitable for hot stamping and reflective sheet has to be guaranteed for imperishable nature for minimum five years. The first colour of legend and border should be done by hot stamping.</li>';
-					html += '<li>The plate should bear the letters "IND" in blue colour on the extreme left centre of the plate. The letter should be one fourth of the size of letters mentioned in rule 51 and should be buried into the foil or applied by Hot stamping and should be an integral part of the plate.</li>';
-					html += '<li>Each plate shall be protected against counterfeiting by applying chromium- based hologram, applied by hot stamping. Stickers and labels are not permitted.</li>';
-					html += '<li>The plate shall bear a permanent consecutive identification number of minimum seven digits, to be laser branded into the reflective sheeting and hot stamping film shall bear a verification inscription.</li>';
+					html += '<li>The plate shall be a solid unit made of 1.0 mm aluminum conforming to DIN 1745 / DIN 1783 or ISO 7591.</li><BR>';
+					html += '<li>Border edges and corners of the plate shall be rounded to avoid injuries to the extent of approx.10 mm and the plates must have an embossed border.</li><BR>';
+					html += '<li>The plate has to be suitable for hot stamping and reflective sheet has to be guaranteed for imperishable nature for minimum five years. The first colour of legend and border should be done by hot stamping.</li><BR>';
+					html += '<li>The plate should bear the letters "IND" in blue colour on the extreme left centre of the plate. The letter should be one fourth of the size of letters mentioned in rule 51 and should be buried into the foil or applied by Hot stamping and should be an integral part of the plate.</li><BR>';
+					html += '<li>Each plate shall be protected against counterfeiting by applying chromium- based hologram, applied by hot stamping. Stickers and labels are not permitted.</li><BR>';
+					html += '<li>The plate shall bear a permanent consecutive identification number of minimum seven digits, to be laser branded into the reflective sheeting and hot stamping film shall bear a verification inscription.</li><BR>';
 				html += '</ul>';
 			html += '</div>';
 		html += '</div>';

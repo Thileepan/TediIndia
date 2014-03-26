@@ -45,11 +45,16 @@ body {
 
 .rectangle-box{
     position: relative;
-    width: 50%;
+    width: 45%;
     overflow: hidden;
     background: #D43400;
 	cursor:pointer;
 	cursor:hand;
+
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px; /* future proofing */
+	-khtml-border-radius: 10px; /* for old Konqueror browsers */
 }
 .rectangle-box:before{
     content: "";
@@ -63,6 +68,7 @@ body {
     bottom: 0;
     right: 0;
     color: white;
+	font-weight: bold;
 	   
 }
 .rectangle-content div {

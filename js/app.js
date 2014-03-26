@@ -4,15 +4,20 @@
 function loadMainPage()
 {
 	var html = '';
-	html += '<div class="row"><div class="col-xs-12"><p class="lead redColor">Welcome to TEDI INDIA!</p>';
+	html += '<div class="row"><div class="col-xs-12"><p class="lead redColor">Welcome to TEDI INDIA!</p></div></div>';
 	//html += '<p>TediIndia.com is the global innovation company that never stops inventing because we are passionate about making progress possible.<BR>Our Company is the global innovation company that never stops inventing because we are passionate about making progress possible.<BR><BR>Our people capture the spark of new ideas and transform them into thousands of ingenious products and practical applications that help make people\'s lives better.</p></div></div>';
 	html += '<div class="row">';
 		html += '<div class="col-xs-12" align="center">';
-			html += '<div class="circle-text" onclick="loadHomePage();"><div><small>Home</small></div></div>';
-			html += '<div class="circle-text" onclick="loadAboutPage();"><div><small>About Us</small></div></div>';
-			html += '<div class="circle-text" onclick="loadProductListPage();"><div><small>Products</small></div></div>';
-			html += '<div class="circle-text" onclick="loadClientsPage();"><div><small>Clients</small></div></div>';
-			html += '<div class="circle-text" onclick="loadContactPage();"><div><small>Contact Us</small></div></div>';
+			//html += '<div class="circle-text" onclick="loadHomePage();"><div><small>Home</small></div></div>';
+			//html += '<div class="circle-text" onclick="loadAboutPage();"><div><small>About Us</small></div></div>';
+			//html += '<div class="circle-text" onclick="loadProductListPage();"><div><small>Products</small></div></div>';
+			//html += '<div class="circle-text" onclick="loadClientsPage();"><div><small>Clients</small></div></div>';
+			//html += '<div class="circle-text" onclick="loadContactPage();"><div><small>Contact Us</small></div></div>';
+			html += '<span class="label label-danger curHand" onclick="loadHomePage();">&nbsp;&nbsp;&nbsp;Home&nbsp;&nbsp;&nbsp;</span><BR><BR>';
+			html += '<span class="label label-danger curHand" onclick="loadAboutPage();">&nbsp;About Us&nbsp;</span><BR><BR>';
+			html += '<span class="label label-danger curHand" onclick="loadProductListPage();">&nbsp;Products&nbsp;</span><BR><BR>';
+			html += '<span class="label label-danger curHand" onclick="loadClientsPage();">&nbsp;&nbsp;&nbsp;Clients&nbsp;&nbsp;</span><BR><BR>';
+			html += '<span class="label label-danger curHand" onclick="loadContactPage();">Contact Us</span>';			
 		html += '</div>';
 	html += '</div>';
 
@@ -28,14 +33,14 @@ function goBack()
 	if(currentPage == 1 || currentPage == 2 || currentPage == 3 || currentPage == 4 || currentPage == 5) {
 		loadMainPage();
 	} else if(currentPage == 6) {
-		loadProductsPage(productID);
+		loadProductListPage();
 	}
 }
 
 function loadHomePage()
 {
 	var html = '';
-	html += '<div class="row"><div class="col-xs-12"><p class="lead redColor">Welcome to TEDI INDIA!</p><HR>';
+	html += '<div class="row"><div class="col-xs-12"><p class="lead redColor">Welcome to TEDI INDIA!</p></div></div>';
 	html += '<p>TediIndia.com is the global innovation company that never stops inventing because we are passionate about making progress possible.<BR>Our Company is the global innovation company that never stops inventing because we are passionate about making progress possible.<BR><BR>Our people capture the spark of new ideas and transform them into thousands of ingenious products and practical applications that help make people\'s lives better.</p></div></div>';
 
 	document.getElementById('backButton').style.display = '';
@@ -46,7 +51,7 @@ function loadHomePage()
 function loadAboutPage()
 {
 	var html = '';
-	html += '<p class="lead redColor">About TEDI INDIA!</p>';
+	html += '<div class="row"><div class="col-xs-12"><p class="lead redColor">About TEDI INDIA!</p></div></div>';
 	html += '<b>PROFILE</b><BR><BR>';
 	html += '2009 - Ventured for Trading Business with Dealers of 3M Retro Reflective Tapes and Distributor of Speed Governors Products<BR>';
 	html += '2012 - Started Distribution of Vehicle Conspicuity(Traffic safety system Division), in the name of "Shri Sabareesh Enterprises" in 2012<BR>';
@@ -63,9 +68,10 @@ function loadAboutPage()
 function loadProductListPage()
 {
 	var html = '';
-	html += '<div class="row"><div class="col-xs-12"><p class="lead redColor">Our Products</p>';
+	html += '<div class="row"><div class="col-xs-12"><p class="lead redColor">Our Products</p></div></div>';
 	html += '<div class="row">';
 		html += '<div class="col-xs-12" align="center">';
+		/*
 			html += '<div class="circle-text" onclick="loadHomePage();"><div><small>IND Number Plate</small></div></div>';
 			html += '<div class="circle-text" onclick="loadAboutPage();"><div><small>Traffic Safety Systems</small></div></div>';
 			html += '<div class="circle-text" onclick="loadProductListPage();"><div><small>Reflective Sign Boards & Sheets</small></div></div>';
@@ -73,6 +79,17 @@ function loadProductListPage()
 			html += '<div class="circle-text" onclick="loadContactPage();"><div><small>Sun Control Film</small></div></div>';
 			html += '<div class="circle-text" onclick="loadContactPage();"><div><small>Vehicle and Specialty Markings</small></div></div>';
 			html += '<div class="circle-text" onclick="loadContactPage();"><div><small>Acrylic Foam Tape</small></div></div>';
+		*/
+			html += '<div class="list-group">';
+				html += '<a href="#" class="list-group-item" onclick="loadProductsPage(1);">IND Number Plate</a>';
+				html += '<a href="#" class="list-group-item">Traffic Safety Systems</a>';
+				html += '<a href="#" class="list-group-item">Reflective Sign Boards & Sheets</a>';
+				html += '<a href="#" class="list-group-item">Car Polishing products</a>';
+				html += '<a href="#" class="list-group-item">Sun Control Film</a>';
+				html += '<a href="#" class="list-group-item">Vehicle and Specialty Markings</a>';
+				html += '<a href="#" class="list-group-item">Acrylic Foam Tape</a>';
+			html += '</div>';
+
 		html += '</div>';
 	html += '</div>';
 
@@ -86,7 +103,7 @@ function loadProductsPage(productID)
 	var html = '';
 	if(productID == 1)
 	{
-		html += '<p class="lead redColor">IND Number Plate</p>';
+		html += '<div class="row"><div class="col-xs-12"><p class="lead redColor">IND Number Plate</p></div></div>';
 		html += '<div class="row"><div class="col-xs-3"><img src="http://www.tediindia.com/images/ind2.jpg" width="50" height="50" /></div><div class="col-xs-39"><p>Windshield The professional aluminium based vehicle number plate manufacturer in south India. We are the manufactures of BLANK NUMBER PLATES, IND NUMBER PLATES, ALUMINIUM EMBOSSED NUMBER PLATES, MACHINES, HOT STAMPING FOILS, HOT STAMPING MACHINE, hYDRAULIC PRESS, CLAPPER DIES etc.</p></div>';
 		html += '<div class="row">';
 			html += '<div class="col-xs-12">';
@@ -106,6 +123,7 @@ function loadProductsPage(productID)
 				html += '</ul>';
 			html += '</div>';
 		html += '</div>';
+		document.getElementById('hiddenCurrentPageID').value = 6;
 	}
 	else if(productID == 2)
 	{

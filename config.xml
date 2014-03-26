@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <!-- versionCode is optional and Android only -->
+
+    <name>TediIndia</name>
+
+    <description>
+        TediIndia Mobile Application 
+    </description>
+
+    <author href="http://www.tediindia.com" email="sktgthill@gmail.com">
+        Thileepan Sivanandham
+    </author>
+
+	<icon src="images/logo.png" width="128" height="128"/>
+	<gap:splash src="images/splash.png" />
+
+</widget>

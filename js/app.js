@@ -1,12 +1,45 @@
 //Author: Thileepan Sivanandham
 //Email: sktgthill@gmail.com
 
+function loadMainPage()
+{
+	var html = '';
+	html += '<div class="row"><div class="col-xs-12"><p class="lead redColor">Welcome to TEDI INDIA!</p>';
+	//html += '<p>TediIndia.com is the global innovation company that never stops inventing because we are passionate about making progress possible.<BR>Our Company is the global innovation company that never stops inventing because we are passionate about making progress possible.<BR><BR>Our people capture the spark of new ideas and transform them into thousands of ingenious products and practical applications that help make people\'s lives better.</p></div></div>';
+	html += '<div class="row">';
+		html += '<div class="col-xs-12" align="center">';
+			html += '<div class="circle-text" onclick="loadHomePage();"><div><small>Home</small></div></div>';
+			html += '<div class="circle-text" onclick="loadAboutPage();"><div><small>About Us</small></div></div>';
+			html += '<div class="circle-text" onclick="loadProductListPage();"><div><small>Products</small></div></div>';
+			html += '<div class="circle-text" onclick="loadClientsPage();"><div><small>Clients</small></div></div>';
+			html += '<div class="circle-text" onclick="loadContactPage();"><div><small>Contact Us</small></div></div>';
+		html += '</div>';
+	html += '</div>';
+
+	document.getElementById('backButton').style.display = 'none';
+	document.getElementById('hiddenCurrentPageID').value = 0;
+	document.getElementById('pageContent').innerHTML = html;
+}
+
+function goBack()
+{
+	var productID = -1;
+	var currentPage = document.getElementById('hiddenCurrentPageID').value;
+	if(currentPage == 1 || currentPage == 2 || currentPage == 3 || currentPage == 4 || currentPage == 5) {
+		loadMainPage();
+	} else if(currentPage == 6) {
+		loadProductsPage(productID);
+	}
+}
+
 function loadHomePage()
 {
 	var html = '';
-	html += '<p class="lead redColor">Welcome to TEDI INDIA!</p>';
-	html += '<p>TediIndia.com is the global innovation company that never stops inventing because we are passionate about making progress possible.<BR>Our Company is the global innovation company that never stops inventing because we are passionate about making progress possible.<BR><BR>Our people capture the spark of new ideas and transform them into thousands of ingenious products and practical applications that help make people\'s lives better.</p>';
+	html += '<div class="row"><div class="col-xs-12"><p class="lead redColor">Welcome to TEDI INDIA!</p><HR>';
+	html += '<p>TediIndia.com is the global innovation company that never stops inventing because we are passionate about making progress possible.<BR>Our Company is the global innovation company that never stops inventing because we are passionate about making progress possible.<BR><BR>Our people capture the spark of new ideas and transform them into thousands of ingenious products and practical applications that help make people\'s lives better.</p></div></div>';
 
+	document.getElementById('backButton').style.display = '';
+	document.getElementById('hiddenCurrentPageID').value = 1;
 	document.getElementById('pageContent').innerHTML = html;
 }
 
@@ -22,6 +55,29 @@ function loadAboutPage()
 
 	html += '<b>History of Company</b><BR><BR>The Company was started by Mr.Elumalai,Bsc. S.Sundar In the year 2012, the company forayed into trading business by taking the distributorship of building products division of 3M India Ltd under the name of new partnership firm \'Shri Sabareesh Enterprises\'.<BR><BR>The company handled the products from the IND Number Plates, TEDI Car care Products, Vehicle Conspicuity of 3M, AFT of 3M, Speed Govenors (Mercyda & craysol). IND Number Plates.';
 
+	document.getElementById('backButton').style.display = '';
+	document.getElementById('hiddenCurrentPageID').value = 2;
+	document.getElementById('pageContent').innerHTML = html;
+}
+
+function loadProductListPage()
+{
+	var html = '';
+	html += '<div class="row"><div class="col-xs-12"><p class="lead redColor">Our Products</p>';
+	html += '<div class="row">';
+		html += '<div class="col-xs-12" align="center">';
+			html += '<div class="circle-text" onclick="loadHomePage();"><div><small>IND Number Plate</small></div></div>';
+			html += '<div class="circle-text" onclick="loadAboutPage();"><div><small>Traffic Safety Systems</small></div></div>';
+			html += '<div class="circle-text" onclick="loadProductListPage();"><div><small>Reflective Sign Boards & Sheets</small></div></div>';
+			html += '<div class="circle-text" onclick="loadClientsPage();"><div><small>Car Polishing products</small></div></div>';
+			html += '<div class="circle-text" onclick="loadContactPage();"><div><small>Sun Control Film</small></div></div>';
+			html += '<div class="circle-text" onclick="loadContactPage();"><div><small>Vehicle and Specialty Markings</small></div></div>';
+			html += '<div class="circle-text" onclick="loadContactPage();"><div><small>Acrylic Foam Tape</small></div></div>';
+		html += '</div>';
+	html += '</div>';
+
+	document.getElementById('backButton').style.display = '';
+	document.getElementById('hiddenCurrentPageID').value = 3;
 	document.getElementById('pageContent').innerHTML = html;
 }
 
@@ -84,9 +140,17 @@ function loadClientsPage()
 	var html = '';
 	html += '<div align="center"><b>Yet to be Updated!</b></div>';
 
+	document.getElementById('backButton').style.display = '';
+	document.getElementById('hiddenCurrentPageID').value = 4;
 	document.getElementById('pageContent').innerHTML = html;
 }
 
 function loadContactPage()
 {
+	var html = '';
+	html += '<div align="center"><b>Yet to be Updated!</b></div>';
+
+	document.getElementById('backButton').style.display = '';
+	document.getElementById('hiddenCurrentPageID').value = 5;
+	document.getElementById('pageContent').innerHTML = html;
 }

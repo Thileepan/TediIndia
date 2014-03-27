@@ -182,8 +182,10 @@ function loadContactPage()
 				html += 'No 64/70 R E Appartment<BR>';
 				html += 'Arya Gowda Road, West Mambalam<BR>';
 				html += 'Chennai - 600033<BR>';
-				html += '<abbr title="Phone">P:</abbr> +1 800 603 6035<BR>';
-				html += '<a href="mailto:#">info@tediindia.com</a>';
+				html += 'Phone: +1 800 603 6035<BR>';
+				html += 'Email: info@tediindia.com<BR><BR>';
+				html += '<a href="tel:+1 800 603 6035"><button type="button" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-earphone"></span>&nbsp;Call</button></a>&nbsp;';
+				html += '<a href="mailto:info@tediindia.com"><button type="button" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-envelope"></span>&nbsp;Email</button></a>';
 			html += '</address>';
 		html += '</div>';
 	html += '</div>';

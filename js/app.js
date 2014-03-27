@@ -4,30 +4,31 @@
 function loadMainPage()
 {
 	var html = '';
-	html += '<div class="row"><div class="col-xs-12"><p class="lead redColor">Welcome to TEDI INDIA!</p></div></div>';
-	//html += '<p>TediIndia.com is the global innovation company that never stops inventing because we are passionate about making progress possible.<BR>Our Company is the global innovation company that never stops inventing because we are passionate about making progress possible.<BR><BR>Our people capture the spark of new ideas and transform them into thousands of ingenious products and practical applications that help make people\'s lives better.</p></div></div>';
+	html += '<div class="row"><div class="col-xs-12"><p class="lead redColor">Welcome to TEDI INDIA!</p><p>TediIndia.com is the global innovation company that never stops inventing because we are passionate about making progress possible.</p></div></div>';
 	html += '<div class="row">';
-		html += '<div class="col-xs-12" align="center">';
-			//html += '<div class="circle-text" onclick="loadHomePage();"><div><small>Home</small></div></div>';
-			//html += '<div class="circle-text" onclick="loadAboutPage();"><div><small>About Us</small></div></div>';
-			//html += '<div class="circle-text" onclick="loadProductListPage();"><div><small>Products</small></div></div>';
-			//html += '<div class="circle-text" onclick="loadClientsPage();"><div><small>Clients</small></div></div>';
-			//html += '<div class="circle-text" onclick="loadContactPage();"><div><small>Contact Us</small></div></div>';
-			
-			//html += '<span class="label label-danger curHand" onclick="loadHomePage();">&nbsp;&nbsp;&nbsp;Home&nbsp;&nbsp;&nbsp;</span><BR><BR>';
-			//html += '<span class="label label-danger curHand" onclick="loadAboutPage();">&nbsp;About Us&nbsp;</span><BR><BR>';
-			//html += '<span class="label label-danger curHand" onclick="loadProductListPage();">&nbsp;Products&nbsp;</span><BR><BR>';
-			//html += '<span class="label label-danger curHand" onclick="loadClientsPage();">&nbsp;&nbsp;&nbsp;Clients&nbsp;&nbsp;</span><BR><BR>';
-			//html += '<span class="label label-danger curHand" onclick="loadContactPage();">Contact Us</span>';			
-
-			html += '<div class="rectangle-box" onclick="loadHomePage();"><div class="rectangle-content"><div><span>Home</span></div></div></div><BR>';
-			html += '<div class="rectangle-box" onclick="loadAboutPage();"><div class="rectangle-content"><div><span>About Us</span></div></div></div><BR>';
-			html += '<div class="rectangle-box" onclick="loadProductListPage();"><div class="rectangle-content"><div><span>Products</span></div></div></div><BR>';
-			html += '<div class="rectangle-box" onclick="loadClientsPage();"><div class="rectangle-content"><div><span>Clients</span></div></div></div><BR>';
-			html += '<div class="rectangle-box" onclick="loadContactPage();"><div class="rectangle-content"><div><span>Contact Us</span></div></div></div><BR>';
-
+		html += '<div class="col-xs-6 col-md-6" align="center">';			
+			//html += '<div class="square-box" onclick="loadHomePage();"><div class="square-content"><div><span class="glyphicon glyphicon-home"></span></div></div></div><BR>';
+			//html += '<div class="square-box" onclick="loadProductListPage();"><div class="square-content"><div><span class="glyphicon glyphicon-shopping-cart"></span></div></div></div><BR>';
+			html += '<button type="button" class="btn btn-danger btn-lg" onclick="loadHomePage();"><span class="glyphicon glyphicon-home"></span></button><BR><BR>';
+			html += '<button type="button" class="btn btn-danger btn-lg" onclick="loadProductListPage();"><span class="glyphicon glyphicon-shopping-cart"></span></button>';
+		html += '</div>';
+		html += '<div class="col-xs-6 col-md-6" align="center">';			
+			//html += '<div class="square-box" onclick="loadAboutPage();"><div class="square-content"><div><span class="glyphicon glyphicon-info-sign"></span></div></div></div><BR>';
+			//html += '<div class="square-box" onclick="loadContactPage();"><div class="square-content"><div><button type="button" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-earphone"></span></button></div></div></div><BR>';
+			html += '<button type="button" class="btn btn-danger btn-lg" onclick="loadAboutPage();"><span class="glyphicon glyphicon-info-sign"></span></button><BR><BR>';
+			html += '<button type="button" class="btn btn-danger btn-lg" onclick="loadContactPage();"><span class="glyphicon glyphicon-earphone"></span></button>';
+		html += '</div>';
+	html += '</div><BR>';
+/*
+	html += '<div class="row">';
+		html += '<div class="col-xs-6 col-md-6" align="center">';
+			html += '<button type="button" class="btn btn-lg btn-danger" onclick="loadProductListPage();">&nbsp;Products&nbsp;</button>';
+		html += '</div>';
+		html += '<div class="col-xs-6 col-md-6" align="center">';
+			html += '<button type="button" class="btn btn-lg btn-danger" onclick="loadContactPage();">Contact Us</button>';
 		html += '</div>';
 	html += '</div>';
+*/
 
 	document.getElementById('backButton').style.display = 'none';
 	document.getElementById('hiddenCurrentPageID').value = 0;
@@ -174,7 +175,18 @@ function loadClientsPage()
 function loadContactPage()
 {
 	var html = '';
-	html += '<div align="center"><b>Yet to be Updated!</b></div>';
+	html += '<div class="row">';
+		html += '<div class="col-xs-12">';
+			html += '<address>';
+				html += '<strong>TediIndia</strong><BR>';
+				html += 'No 64/70 R E Appartment<BR>';
+				html += 'Arya Gowda Road, West Mambalam<BR>';
+				html += 'Chennai - 600033<BR>';
+				html += '<abbr title="Phone">P:</abbr> +1 800 603 6035<BR>';
+				html += '<a href="mailto:#">info@tediindia.com</a>';
+			html += '</address>';
+		html += '</div>';
+	html += '</div>';
 
 	document.getElementById('backButton').style.display = '';
 	document.getElementById('hiddenCurrentPageID').value = 5;

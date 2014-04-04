@@ -131,6 +131,39 @@ function loadProductsPage(productID)
 					html += '<li>Each plate shall be protected against counterfeiting by applying chromium- based hologram, applied by hot stamping. Stickers and labels are not permitted.</li><BR>';
 					html += '<li>The plate shall bear a permanent consecutive identification number of minimum seven digits, to be laser branded into the reflective sheeting and hot stamping film shall bear a verification inscription.</li><BR>';
 				html += '</ul>';
+				html += '<p align="center"><img class="img-responsive" src="http://tediindia.com/images/numPlate.jpg" /></p>';
+				html += '<p>The size of the plate for different categories of vehicles shall be :</p>';
+				html += '<ul>';
+					html += '<li>For two and three - wheelers 200 x 100 mm</li><BR>';
+					html += '<li>For Light Motor Vehicles / Passenger Cars 340 x 200 mm / 500 x 120 mm</li><BR>';
+					html += '<li>For medium commercial vehicles, heavy commercial vehicles and Trailer / Combination 340 x 200 mm</li><BR>';
+					html += '<li>In the case of motor cycles, the registration marks in the front shall be displayed parallel to the handle bar or on any part of the vehicle including mudguard facing the front instead of, on a plate in line with the axis of the vehicle.</li><BR>';
+					html += '<li>The registration mark exhibited at the rear of a transport vehicle shall be affixed to the vehicle on the right hand side at a distance not exceeding 1 mtr from the ground. The registration mark shall also be painted on the right and left side on the body of the vehicle in the case of a transport vehicle.</li><BR>';
+					html += '<li>The letters of the registration marks shall be in English and the figures shall be in Arabic numerals and the letters and figures shall be embossed and hot stamped and shall be shown : 1. In black colour on yellow background , in case of transport vehicles 2. In black colour on white background </li><BR>';
+					html += '<li>The registration mark shall be in two lines, the State code and registering authority code forming the first line and the rest forming the second line, one below the other. In models of vehicles, having no sufficient provision at the rear to exhibit the registration mark in two lines, it shall be sufficient if in such vehicles registration mark is exhibited in a single line.</li><BR>';
+					html += '<li>The registration mark on a light motor vehicle may be in the centre with illumination.</li><BR>';
+					html += '<p>The plate shall be a solid unit made of 1.0 mm aluminium conforming to DIN 1745/DIN 1783 or ISO 7591. Border edges and corners of the plate shall be rounded to avoid injuries to the extent of approx.10 mm and the plates must have an embossed border. The plate shall be suitable for hot stamping and the reflective sheet has to be guaranteed for imperishable nature for minimum of five years. Some of the other features are explained below in detail:</p>';
+					html += '<p><b>Number Plate Fonts</b></p>';
+					html += '<p align="center"><img class="img-responsive" src="http://tediindia.com/images/fonts.png" /></p>';
+					html += '<p><b>Reflective Features</b></p>';
+					html += '<p>One of the significant safety feature of the High Security License Plates is reflectivity. High Security License Plates will have a high quality retro reflective sheeting which is laminated and embossed. This sheeting provides excellent conspicuity during day time and offer high reflectivity in the night. By virtue of reflective sheeting the vehicle is visible from a minimum difference of 200 meters in night irrespective of the working of its tail lamps etc.</p>';
+					html += '<p>For over 40 years, worldwide, it has been proved that application and usage of Retro Reflective sheeting on vehicle License Plates reduces the accidents and loss of life significantly. This feature is particularly essential in India, given the fact that lack of visibility is one of the highest causes of fatal accidents.</p>';
+					html += '<p><b>Chromium based hologram</b></p>';
+					html += '<p>Holograms are well known security features of our daily life. Hot-stamping of chromium based hologram makes it possible for a license plate to withstand the inclemency of the weather for many years, The hologram shall carry the image of "CHAKRA" as notified by the Govt. of India. Being hot stamped with high pressure at 220 degree Celsius, this hologram cannot be tampered with or removed or replaced. Holograms on number plates are easily visible with naked eyes so that they give a direct hint about possible fraud if they are missing or destroyed/tampered with.</p>';
+					html += '<p align="center"><img class="img-responsive" src="http://tediindia.com/images/indHolo.jpg" /></p>';
+					html += '<p><b>Security inscript</b></p>';
+					html += '<p>The security inscription shall incorporate the following features:</p>';
+					html += '<ul>';
+						html += '<li>The type of colour or ink which is used for the inscription is based on a Pearl Pigment Colour. Verification of the use of this kind of colour can be made as follows:</li><BR>';
+						html += '<li>By changing the visual direction between the license plate and the viewer (under day light) there can be seen a change in intensity of the colour. This change is also related to the intensity of the external illumination of the license plate. This property shall avoid copying such kind of product by using a simple print.</li><BR>';
+					html += '</ul>';
+					html += '<p><b>Laser etched 9 digit alpha numeric code</b></p>';
+					html += '<p>This is engraved on the left hand side just below the words IND with laser. This is a sequential identification of individual license plates across the country. It acts as a watermark and cannot be erased. On the basis of this laser code, complete details of the vehicle can be easily obtained from the records of HSRP supplier/RTO </p>';
+					html += '<p><b>Third licence plate sticker on wind screen</b></p>';
+					html += '<p>This is a self-destructive self-adhesive sticker pasted on wind screens. It contains all information pertaining to a vehicle\'s registration. This serves the purpose of double secure identification mark of a vehicle. </p>';
+					html += '<p><b>Sanp lock</b></p>';
+					html += '<p>The snap lock is the external fastening device used as normal bolting procedure for the License Plate to the vehicle body. This device prevents removal and reusability of the License Plate from the vehicle. Also any tampering with the snap lock is easily detectable by naked eye, making it easy for the law enforcing agencies to detect any abnormality in the License Plate.</p>';
+				html += '</ul>';
 			html += '</div>';
 		html += '</div>';		
 	}
@@ -140,6 +173,7 @@ function loadProductsPage(productID)
 		html += '<div class="row">';
 			html += '<div class="col-xs-12">';
 				html += '<p>Road authorities have to contend with several challenges like rapidly growing vehicular traffic, challenging road & driving conditions and increased safety hazards. For over 60 years, 3M has pioneered the use of retro reflective technology in road safety and traffic management solutions to ensure safe, orderly and efficient movement of all road users and vehicles.</p>';
+				html += '<p align="center"><img class="img-responsive" src="http://tediindia.com/images/saferoad.jpg" /></p>';
 				html += '<p>3M Traffic Safety Systems - High performance materials, systems and services to effectively serve motorists in today\'s challenging driving conditions.</p>';
 				html += '<p><b>Road Safety:</b></p>';
 				html += '<p>Superior in quality, the new 3M&#8482; Crystalline Automotive Films are innovative, high-technology films that represent a clear breakthrough in automotive solar protection. Developed in our world-leading laboratories, 3M&#8482; Crystalline Automotive Films is the only sun control film produced using Multilayer Nanotechnology, the same advanced technology used to improve the brightness in flat panel LCD televisions.</p>';
@@ -163,6 +197,7 @@ function loadProductsPage(productID)
 				html += '<p>While India is home to just 1% of the global vehicle population, the country accounts for 10% of road accidents worldwide. Major portion of these vehicular accidents, especially the fatal ones, occur at night.</p>';
 				html += '<p><b>Major factors that affect vehicle safety</b></p>';
 				html += '<p>3M&#8482; offers high visibility conspicuity sheeting solutions which can be applied on wide variety of vehicles to significantly enhance their night time visibility.</p>';
+				html += '<p align="center"><img class="img-responsive" src="http://tediindia.com/images/3msafety.jpg" /></p>';
 				html += '<p><b>Benefits:</b></p>';
 				html += '<ul>';
 					html += '<li>A marked vehicle is recognized faster than an unmarked vehicle</li><BR>';
@@ -199,9 +234,9 @@ function loadProductsPage(productID)
 		
 		html += '<div class="row">';
 			html += '<div class="col-xs-12">';
-				html += '<p>3M&#8482; Diamond Grade&#8482; Reflective Sheeting is state-of-the-art sheeting used for traffic control and guidance signs and devices. This highly reflective, durable, and visible sheeting meets a wide variety of sign visibility needs in all light and weather conditions and outperforms the competition when it really counts.</p>';
-				
+				html += '<p>3M&#8482; Diamond Grade&#8482; Reflective Sheeting is state-of-the-art sheeting used for traffic control and guidance signs and devices. This highly reflective, durable, and visible sheeting meets a wide variety of sign visibility needs in all light and weather conditions and outperforms the competition when it really counts.</p>';				
 				html += '<p><b>3M&#8482; Diamond Grade&#8482; DG<sup>3</sup> Reflective Sheeting</b></p>';
+				html += '<p align="center"><img class="img-responsive" src="http://tediindia.com/images/3M_Reflective.jpg" /></p>';
 				html += '<p>3M&#8482; Diamond Grade&#8482; DG<sup>3</sup> Reflective Sheeting is the first-of-its-kind to meet the ASTM Type XI spec This State-of-the-art, full cube prismatic reflective sheeting ensures optimal performance at all sight distances. The optical elements of the DG<sup>3</sup> sheeting series return almost 60% of available light to road users - nearly twice the reflectivity when compared to conventional prismatic sheeting.</p>';
 				html += '<ul>';
 					html += '<li>Ideal for short, medium and long sight distances</li><BR>';
@@ -215,6 +250,7 @@ function loadProductsPage(productID)
 				html += '<p>3M&#8482; Diamond Grade&#8482; DG<sup>3</sup> Reflective Sheeting is available in Orange, White, Yellow, Red, Blue, Green, Brown</p><BR>';
 				
 				html += '<p><b>3M&#8482; Diamond Grade&#8482; DG<sup>3</sup> Fluorescent Reflective Sheeting</b></p>';
+				html += '<p align="center"><img class="img-responsive" src="http://tediindia.com/images/reflectiveColors.jpg" /></p>';
 				html += '<p>3M&#8482; Diamond Grade&#8482; DG<sup>3</sup> Fluorescent Reflective Sheeting leverages full-cube prismatic and fluorescent technology to provide excellent visibility at dawn, dusk and during inclement weather.</p><BR>';
 				html += '<ul>';
 					html += '<li>Ideal for short, medium and long sight distances</li><BR>';
@@ -237,10 +273,12 @@ function loadProductsPage(productID)
 				html += '</ul>';
 				
 				html += '<p><b>3M&#8482; Diamond Grade&#8482; DG<sup>3</sup> Fluorescent Yellow Green Sheeting 4083</b></p>';
+				html += '<p align="center"><img class="img-responsive" src="http://tediindia.com/images/YellowGreen.jpg" /></p>';
 				html += '<p>3M&#8482; Diamond Grade&#8482; DG<sup>3</sup> Fluorescent Yellow Green Sheeting 4083 is fluorescent yellow-green full-cube prismatic reflective sheeting with pressure sensitive adhesive.</p>';
 				html += '<p>High visibility in various conditions - daytime, night, twilight and inclement weather, and excellent visibility at wide entrance and observation angles, makes the DG<sup>3</sup> Fluorescent Yellow Green Sheeting 4083 ideal for non-motorized traffic warning signs.</p><BR>';
 
 				html += '<p><b>3M&#8482; Diamond Grade&#8482; DG<sup>3</sup> Fluorescent Yellow Sheeting 4081</b></p>';
+				html += '<p align="center"><img class="img-responsive" src="http://tediindia.com/images/Yellow.jpg" /></p>';
 				html += '3M&#8482; Diamond Grade&#8482; DG<sup>3</sup> Fluorescent Yellow Sheeting 4081 is a fluorescent yellow full-cube prismatic reflective sheeting with pressure sensitive adhesive.';
 				html += '<p>High visibility in various conditions - daytime, night, twilight and inclement weather, and excellent visibility at wide entrance and observation angles, makes the Fluorescent Yellow Sheeting 4081 conform to all color specifications for yellow traffic control signs and devices.</p><BR>';
 			html += '</div>';
@@ -253,6 +291,7 @@ function loadProductsPage(productID)
 			html += '<div class="col-xs-12">';
 				html += '<p><b>Windshield Washer</b></p>';
 				html += '<p>Windshield Washer removes stains of dirt, greasy and oily substances and thereby makes Windshield more shiny and glossy. Its unique preparation lessens any irritation during application.<BR></p>';
+				html += '<p align="center"><img class="img-responsive" src="http://tediindia.com/images/ww.jpg" /></p>';
 				html += '<p><b>Directions for use:</b></p>';
 				html += '<p>Pour the content into the windshield wiper reservoir. Add required quantity of clean water to the reservoir. Shake well before use.<BR></p>';
 				html += '<p><b>Cautions</b></p>';
@@ -261,6 +300,7 @@ function loadProductsPage(productID)
 
 				html += '<p><b>Car Shampoo</b></p>';
 				html += '<p>Car Shampoo removes stains of dirt, greasy and oily substances and thereby makes surfaces more shiny and glossy. Its unique preparation lessens any irritation during application<BR></p>';
+				html += '<p align="center"><img class="img-responsive" src="http://tediindia.com/images/carshampoo.jpg" /></p>';
 				html += '<p><b>Directions for use:</b></p>';
 				html += '<p>Use a measuring bucket for optimum usage. Dilute it in 1:10 ratio with water. Gently apply by a soaked sponge on surfaces or can use soap gun for application. Spray water jet on applied surfaces in optimum pressure and use micro fibre cloth for fine wiping. For external use only and dilution is needed. Shake well before use.<BR></p>';
 				html += '<p><b>Cautions</b></p>';
@@ -269,6 +309,7 @@ function loadProductsPage(productID)
 
 				html += '<p><b>Vinyl & plastic Dresser</b></p>';
 				html += '<p>Vinyl & plastic Dresser makes vinyl and plastic surfaces more shiny and glossy. Water based preparation avoids any corrosion by dresser application. It helps for finished look for all after sale services of all automobiles.<BR></p>';
+				html += '<p align="center"><img class="img-responsive" src="http://tediindia.com/images/car-interior.jpg" /></p>';
 				html += '<p><b>Directions for use:</b></p>';
 				html += '<p>Use a fine spray bottle for optimum usage. Spray on rubber and vinyl surfaces and gently wipe by a sponge. When spraying is not applicable, spray on sponge and then apply on the surfaces. For external use only and no dilution is needed. Shake well before use.<BR></p>';
 				html += '<p><b>Cautions</b></p>';
@@ -277,6 +318,7 @@ function loadProductsPage(productID)
 
 				html += '<p><b>Glass cleaner</b></p>';
 				html += '<p>Glass cleaner removes stains of dirt, greasy and oily substances and thereby makes glass surfaces more shiny and glossy. Its unique preparation lessens any irritation during application. It helps for finished and clean look for all after sale services on glass surfaces.<BR></p>';
+				html += '<p align="center"><img class="img-responsive" src="http://tediindia.com/images/glasscleaner.jpg" /></p>';
 				html += '<p><b>Directions for use:</b></p>';
 				html += '<p>Use a fine spray bottle for optimum usage. Spray on glass surfaces and gently wipe by a micro fibre cloth. For external use only and no dilution is needed. Shake well before use.<BR></p>';
 				html += '<p><b>Cautions</b></p>';
@@ -285,6 +327,7 @@ function loadProductsPage(productID)
 
 				html += '<p><b>Interior cleaner</b></p>';
 				html += '<p>Interior cleaner removes stains of dirt, greasy and oily substances from car Upholstery, vinyl & plastic surfaces. Its unique preparation lessens any irritation during application.<BR></p>';
+				html += '<p align="center"><img class="img-responsive" src="http://tediindia.com/images/interior.jpg" /></p>';
 				html += '<p><b>Directions for use:</b></p>';
 				html += '<p>Use a measuring bucket for optimum usage. Diluteit in 1: 10 ratio with water. Gently spray & brush up the area. Use absorbing cloth for ?ne wiping. For external use only and dilution is needed. Shake well before use.<BR></p>';
 				html += '<p><b>Cautions</b></p>';
@@ -293,6 +336,7 @@ function loadProductsPage(productID)
 
 				html += '<p><b>Tyre Dresser</b></p>';
 				html += '<p>Tyre Dresser makes rubber and vinyl surfaces more shiny and glossy. Water based preparation avoids any corrosion by dresser application.It helps for finished look for all after sale services of all type automobiles.<BR></p>';
+				html += '<p align="center"><img class="img-responsive" src="http://tediindia.com/images/tyreDresser.jpg" /></p>';
 				html += '<p><b>Directions for use:</b></p>';
 				html += '<p>Use a fine spray bottle for optimum usage. Spray on rubber and vinyl surfaces and gently wipe by a sponge. When spraying is not applicable, spray on sponge and then apply on the surfaces. For external use only and no dilution is needed. Shake well before use.<BR></p>';
 				html += '<p><b>Cautions</b></p>';
@@ -317,6 +361,7 @@ function loadProductsPage(productID)
 				html += '</ul>';
 
 				html += '<p><b>3M Crystalline Automotive Films</b></p>';
+				html += '<p align="center"><img class="img-responsive" src="http://tediindia.com/images/3mcrystal.bmp" /></p>';
 				html += '<p><b>The only Sun Control Film with Multilayer Nanotechnology</b></p>';
 				html += '<p>Superior in quality, the new 3M&#8482; Crystalline Automotive Films are innovative, high-technology films that represent a clear breakthrough in automotive solar protection. Developed in our world-leading laboratories, 3M&#8482; Crystalline Automotive Films is the only sun control film produced using Multilayer Nanotechnology, the same advanced technology used to improve the brightness in flat panel LCD televisions.</p>';
 
@@ -392,6 +437,7 @@ function loadProductsPage(productID)
 				html += '</ul>';
 
 				html += '<p><b>3M Automotive Films</b></p>';
+				html += '<p align="center"><img class="img-responsive" src="http://tediindia.com/images/3mautomative.jpg" /></p>';
 				html += '<p><b>CS Series</b></p>';
 				html += '<p>Premium Colour Stable sun control films with unique solar-absorbing technology that hold their colour and are high on heat rejection</p>';
 				html += '<table class="table table-bordered">';
@@ -539,6 +585,7 @@ function loadProductsPage(productID)
 			html += '<div class="col-xs-12">';
 				html += '<p><b>3M&#8482; Conspicuity Markings for Truck and Trailers</b></p>';
 				html += '<p>3M&#8482; Diamond Grade&#8482; Conspicuity Tape is six times brighter than conventional markings. It is the ideal truck tape to use to meet the DOT regulation. 3M\'s DOT reflective tape is highly durable and non-corroding.</p>';
+				html += '<p align="center"><img class="img-responsive" src="http://tediindia.com/images/truck2.jpg" /></p>';
 				html += '<p><b>Benefits:</b></p>';
 				html += '<ul>';
 					html += '<li>3M\'s DOT tape is certified and guaranteed to meet and exceed NHTSA requirements</li><BR>';
@@ -560,6 +607,7 @@ function loadProductsPage(productID)
 				html += '</ul>';
 				html += '<p><b>3M&#8482; Conspicuity Markings for Railcar</b></p>';
 				html += '<p>3M&#8482; Diamond Grade&#8482; Rail Car Markings meet and exceed FRA-224 specifications. With superior polycarbonate construction and low-temperature adhesive, these markings are easy to apply, bright and reflect at angles up to 90 degrees.</p>';
+				html += '<p align="center"><img class="img-responsive" src="http://tediindia.com/images/rail_markings.jpg" /></p>';
 				html += '<p><b>Benefits:</b></p>';
 				html += '<ul>';
 					html += '<li>FRA 224 compliant - vivid yellows and bright whites</li><BR>';
@@ -578,6 +626,7 @@ function loadProductsPage(productID)
 				html += '</ul>';
 				html += '<p><b>3M&#8482; Conspicuity Markings for School Bus</b></p>';
 				html += '<p>3M&#8482; Diamond Grade&#8482; Conspicuity Markings for school buses are highly reflective, durable and colorfast and are used to improve the visibility of school buses to approaching drivers.</p>';
+				html += '<p align="center"><img class="img-responsive" src="http://tediindia.com/images/School.jpg" /></p>';
 				html += '<p><b>Benefits:</b></p>';
 				html += '<ul>';
 					html += '<li>FMVSS and CSA D250 compliant - bright yellow and vivid yellow markings</li><BR>';
@@ -597,8 +646,10 @@ function loadProductsPage(productID)
 				html += '</ul>';
 				html += '<p><b>3M&#8482; Conspicuity Markings for Marine</b></p>';
 				html += '<p>Enhance the visibility of navigational buoys, channel makers, and dayboards with 3M\'s USCGFP Prismatic Sheeting. For long distance visibility during the day or night.</p>';
+				html += '<p align="center"><img class="img-responsive" src="http://tediindia.com/images/Marine.jpg" /></p>';
 				html += '<p><b>3M&#8482; Reflective Markings for Emergency Vehicles</b></p>';
-				html += '<p>3M&#8482; Diamond Grade&#8482; Reflective materials exceed NFPA 1901 standard. </p>';
+				html += '<p>3M&#8482; Diamond Grade&#8482; Reflective materials exceed NFPA 1901 standard.</p>';
+				html += '<p align="center"><img class="img-responsive" src="http://tediindia.com/images/actambulance.jpg" /></p>';
 				html += '<p><b>NFPA 1901 Standard:</b></p>';
 				html += '<ul>';
 					html += '<li>To increase highway visibility, at least 50 percent of the rear-facing vertical surface must be covered with 6-inch reflective red and yellow, fluorescent yellow, or fluorescent yellow-green material. The markings must be in a chevron pattern sloping downward from the center of the vehicle at a 45-degree angle.</li><BR>';
@@ -614,6 +665,7 @@ function loadProductsPage(productID)
 				html += '</ul>';
 				html += '<p><b>3M&#8482; Emergency and Egress Markings</b></p>';
 				html += '<p>Photoluminescent material is a high performance, luminous film used for production of glow-in-the-dark signs in emergency exits and stairwells in buildings, ships, ferries and railcars. Their superior luminosity, high conformability and long-term durability make them an ideal solution for your safety needs.</p>';
+				html += '<p align="center"><img class="img-responsive" src="http://tediindia.com/images/Egress.jpg" /></p>';
 			html += '</div>';
 		html += '</div>';
 	}
@@ -624,6 +676,7 @@ function loadProductsPage(productID)
 			html += '<div class="col-xs-12">';
 				html += '<p><b>3M&#8482; Pressure Sensitive Acrylic Foam Tape 5344, Gray, 1.14 mm</b></p>';
 				html += '<p>3M&#8482; Pressure Sensitive Acrylic Foam Tape 5344 is a 1.14 mm (0.045 in) thick, gray, double-coated acrylic foam tape commonly used for the attachment of automotive exterior trim parts such as body side moldings.</p>';
+				html += '<p align="center"><img class="img-responsive" src="http://tediindia.com/images/AFT1.jpg" /></p>';
 				html += '<ul>';
 					html += '<li>Unique foam core that provides stress relaxation when high application loads are encountered, while maintaining tight bond-line aesthetics under normal conditions.</li><BR>';
 					html += '<li>Bonds to a variety of automotive substrates.</li><BR>';
@@ -634,6 +687,7 @@ function loadProductsPage(productID)
 
 				html += '<p><b>3M&#8482; Pressure Sensitive Acrylic Foam Tape 5356, Gray, 1.52 mm</b></p>';
 				html += '<p>3M&#8482; Pressure Sensitive Acrylic Foam Tape 5356 is a 1.52 mm (0.060 in) thick, gray, double-coated acrylic foam tape used for the attachment of a variety of automotive exterior trim parts.</p>';
+				html += '<p align="center"><img class="img-responsive" src="http://tediindia.com/images/AFT.jpg" /></p>';
 				html += '<ul>';
 					html += '<li>Unique foam core that provides stress relaxation when high application loads are encountered, while maintaining tight bond-line aesthetics under normal conditions</li><BR>';
 					html += '<li>Bonds to a variety of automotive substrates</li><BR>';

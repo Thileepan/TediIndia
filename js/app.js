@@ -50,7 +50,8 @@ function loadHomePage()
 {
 	var html = '';
 	html += '<div class="row"><div class="col-xs-12"><p class="lead redColor">Welcome to TEDI INDIA!</p></div></div>';
-	html += '<p>TediIndia.com is the global innovation company that never stops inventing because we are passionate about making progress possible.<BR>Our Company is the global innovation company that never stops inventing because we are passionate about making progress possible.<BR><BR>Our people capture the spark of new ideas and transform them into thousands of ingenious products and practical applications that help make people\'s lives better.</p></div></div>';
+	html += '<p align="center" onclick="window.open(\'http://tediindia.com/images/page1-img4.jpg\', \'_system\', \' \');"><img class="img-responsive" src="http://tediindia.com/images/page1-img4.jpg" /></p>';
+	html += '<p>TediIndia.com is the global innovation company that never stops inventing because we are passionate about making progress possible.<BR><BR>Our people capture the spark of new ideas and transform them into thousands of ingenious products and practical applications that help make people\'s lives better.</p></div></div>';
 
 	document.getElementById('backButton').style.display = '';
 	document.getElementById('hiddenCurrentPageID').value = 1;

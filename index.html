@@ -37,18 +37,37 @@
 	</head>
 	<body data-offset="50" data-twttr-rendered="true">
 
-		<!-- HEADER -->
-		<div class="navbar navbar-default navbar-inverses" role="navigation">
-			<span>
-				<a class="navbar-brand" href="#"><img src="http://www.tediindia.com/images/logo.png" width="150" height="35" /></a>
-			</span>
-			<span class="text-right">
-				<p style="padding-top:10px;padding-right:10px;"><button id="backButton" style="display:none;background-color:#D43400;color:white;" type="button" class="btn btn-sm" onclick="goBack();">Back</button></p>
-			</span>
-		</div>
+		<nav class="navbar navbar-default" role="navigation">
+		  <div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			  <a class="navbar-brand" href="#" onclick="loadMainPage();"><img src="http://www.tediindia.com/images/logo.png" width="150" height="35" /></a>			  
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			  <ul class="nav navbar-nav">
+				<li class="active" onclick="loadHomePage();"><a href="#">Home</a></li>
+				<li onclick="loadAboutPage();"><a href="#">About Us</a></li>
+				<li onclick="loadProductListPage();"><a href="#">Products</a></li>
+				<li onclick="loadContactPage();"><a href="#">Contact Us</a></li>
+			  </ul>
+			  
+			 </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
 
 		<div class="container-fluid">
 			<div class="row">
+				<span class="pull-right">
+					<p style="padding-top:10px;padding-right:10px;"><button id="backButton" style="display:none;background-color:#D43400;color:white;" type="button" class="btn btn-sm" onclick="goBack();">Back</button></p>
+				</span>
 				<div class="col-xs-12" id="pageContent">
 				</div>
 				<input type="hidden" id="hiddenCurrentPageID" value="0" />
@@ -57,6 +76,13 @@
 	</body>
 
 	<script type="text/javascript">
+		$("body").on("click", ".navbar-collapse a", function() {
+		  var $this = $(this);
+
+		  setTimeout(function() {
+			 $this.closest(".navbar-collapse").collapse('hide');
+		  }, 350);
+		});
 		loadMainPage();
 	</script>
 </html>

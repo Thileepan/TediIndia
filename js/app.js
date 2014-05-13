@@ -6,11 +6,24 @@ function loadMainPage()
 	var html = '';
 	html += '<div class="row"><div class="col-xs-12"><p class="lead redColor">Welcome to TEDI INDIA!</p></div></div>';
 	html += '<div class="row">';
-		html += '<div class="col-xs-6 col-md-6" align="center">';			
-			//html += '<div class="square-box" onclick="loadHomePage();"><div class="square-content"><div><span class="glyphicon glyphicon-home"></span></div></div></div><BR>';
-			//html += '<div class="square-box" onclick="loadProductListPage();"><div class="square-content"><div><span class="glyphicon glyphicon-shopping-cart"></span></div></div></div><BR>';
+		html += '<div class="col-xs-10 col-xs-offset-1 col-md-10 col-md-offset-1" align="center">';
+			//html += '<div class="rectangle-box" onclick="loadHomePage();"><div class="rectangle-content"><div><span class="glyphicon glyphicon-home"></span></div></div></div><BR>';
+			html += '<div class="panel panel-default curHand" style="background-color:#D43400;color:white;" onclick="loadProductsPage(1, 2);"><div class="panel-body">IND Number Plates</div></div>';
+			html += '<div class="panel panel-default curHand" style="background-color:#D43400;color:white;" onclick="loadProductsPage(1, 2);"><div class="panel-body">Vehicle Conspicuity Tapes</div></div>';
+			html += '<div class="panel panel-default curHand" style="background-color:#D43400;color:white;" onclick="loadProductsPage(3, 2);"><div class="panel-body">Reflective Sign Boards</div></div>';
+			html += '<div class="panel panel-default curHand" style="background-color:#D43400;color:white;" onclick="loadProductsPage(4, 2);"><div class="panel-body">Car Polish Products</div></div>';
+			html += '<div class="panel panel-default curHand" style="background-color:#D43400;color:white;" onclick="loadProductsPage(7, 2);"><div class="panel-body">AFT Tapes</div></div>';
+			//html += '<div class="rectangle-box" onclick="loadProductListPage();"><div class="rectangle-content"><div><span class="glyphicon glyphicon-shopping-cart"></span></div></div></div><BR>';
+			/*
 			html += '<button type="button" class="btn btn-danger btn-lg" style="width:75px;height:75px;" onclick="loadHomePage();"><span class="glyphicon glyphicon-home"></span></button><BR><span style="color:grey">Home</span><BR><BR>';
 			html += '<button type="button" class="btn btn-danger btn-lg" style="width:75px;height:75px;" onclick="loadProductListPage();"><span class="glyphicon glyphicon-shopping-cart"></span></button><BR><span style="color:grey">Products</span>';
+			*/
+		html += '</div>';
+		/*
+		html += '<div>';
+			html += '<div class="col-xs-12 col-md-12" align="center">';
+				html += '<div class="rectangle-box" onclick="loadProductListPage();"><div class="rectangle-content"><div><span class="glyphicon glyphicon-shopping-cart"></span></div></div></div><BR>';
+			html += '</div>';
 		html += '</div>';
 		html += '<div class="col-xs-6 col-md-6" align="center">';
 			//html += '<div class="square-box" onclick="loadAboutPage();"><div class="square-content"><div><span class="glyphicon glyphicon-info-sign"></span></div></div></div><BR>';
@@ -18,6 +31,7 @@ function loadMainPage()
 			html += '<button type="button" class="btn btn-danger btn-lg" style="width:75px;height:75px;" onclick="loadAboutPage();"><span class="glyphicon glyphicon-info-sign"></span></button><BR><span style="color:grey">About Us</span><BR><BR>';
 			html += '<button type="button" class="btn btn-danger btn-lg" style="width:75px;height:75px;" onclick="loadContactPage();"><span class="glyphicon glyphicon-earphone"></span></button><BR><span style="color:grey">Contact Us</span>';
 		html += '</div>';
+		*/
 	html += '</div><BR>';
 /*
 	html += '<div class="row">';
@@ -39,10 +53,12 @@ function goBack()
 {
 	var productID = -1;
 	var currentPage = document.getElementById('hiddenCurrentPageID').value;
-	if(currentPage == 1 || currentPage == 2 || currentPage == 3 || currentPage == 4 || currentPage == 5) {
+	if(currentPage == 1 || currentPage == 2 || currentPage == 3 || currentPage == 4 || currentPage == 5 || currentPage == 7) {
 		loadMainPage();
 	} else if(currentPage == 6) {
 		loadProductListPage();
+	} else if(currentPage == 8) {
+		loadContactPage();
 	}
 }
 
@@ -91,13 +107,13 @@ function loadProductListPage()
 			html += '<div class="circle-text" onclick="loadContactPage();"><div><small>Acrylic Foam Tape</small></div></div>';
 		*/
 			html += '<div class="list-group">';
-				html += '<a href="#" class="list-group-item" onclick="loadProductsPage(1);">IND Number Plate</a>';
-				html += '<a href="#" class="list-group-item" onclick="loadProductsPage(6);">Vehicle Conspicuity Tapes</a>';
-				html += '<a href="#" class="list-group-item" onclick="loadProductsPage(3);">Reflective Sign Boards & Sheets</a>';
-				html += '<a href="#" class="list-group-item" onclick="loadProductsPage(4);">Car Polishing products</a>';
-				html += '<a href="#" class="list-group-item" onclick="loadProductsPage(7);">Acrylic Foam Tapes</a>';
-				html += '<a href="#" class="list-group-item" onclick="loadProductsPage(5);">Sun Control Film</a>';
-				html += '<a href="#" class="list-group-item" onclick="loadProductsPage(2);">Traffic Safety Systems</a>';		
+				html += '<a href="#" class="list-group-item" onclick="loadProductsPage(1, 1);">IND Number Plate</a>';
+				html += '<a href="#" class="list-group-item" onclick="loadProductsPage(6, 1);">Vehicle Conspicuity Tapes</a>';
+				html += '<a href="#" class="list-group-item" onclick="loadProductsPage(3, 1);">Reflective Sign Boards & Sheets</a>';
+				html += '<a href="#" class="list-group-item" onclick="loadProductsPage(4, 1);">Car Polishing products</a>';
+				html += '<a href="#" class="list-group-item" onclick="loadProductsPage(7, 1);">Acrylic Foam Tapes</a>';
+				html += '<a href="#" class="list-group-item" onclick="loadProductsPage(5, 1);">Sun Control Film</a>';
+				html += '<a href="#" class="list-group-item" onclick="loadProductsPage(2, 1);">Traffic Safety Systems</a>';
 			html += '</div>';
 
 		html += '</div>';
@@ -108,13 +124,21 @@ function loadProductListPage()
 	document.getElementById('pageContent').innerHTML = html;
 }
 
-function loadProductsPage(productID)
+function loadProductsPage(productID, fromReq)
 {
 	var html = '';
-	document.getElementById('hiddenCurrentPageID').value = 6;
+	document.getElementById('backButton').style.display = '';
+	if(fromReq == 1) {
+		document.getElementById('hiddenCurrentPageID').value = 6;
+	} else {
+		document.getElementById('hiddenCurrentPageID').value = 7;
+	}
+
+	var pageID = 9;
 	if(productID == 1)
 	{
 		html += '<div class="row"><div class="col-xs-12"><p class="lead redColor">IND Number Plate</p></div></div>';
+		html += '<div class="row"><div class="col-xs-12" align="center"><button class="btn btn-info" onclick="loadContactForm('+productID+');">Enquiry Product</button></div></div><BR>';
 		html += '<div class="row"><div class="col-xs-12"><p>Windshield The professional aluminium based vehicle number plate manufacturer in south India. We are the manufactures of BLANK NUMBER PLATES, IND NUMBER PLATES, ALUMINIUM EMBOSSED NUMBER PLATES, MACHINES, HOT STAMPING FOILS, HOT STAMPING MACHINE, hYDRAULIC PRESS, CLAPPER DIES etc.</p></div></div>';
 		html += '<div class="row">';
 			html += '<div class="col-xs-12">';
@@ -166,11 +190,13 @@ function loadProductsPage(productID)
 					html += '<p>The snap lock is the external fastening device used as normal bolting procedure for the License Plate to the vehicle body. This device prevents removal and reusability of the License Plate from the vehicle. Also any tampering with the snap lock is easily detectable by naked eye, making it easy for the law enforcing agencies to detect any abnormality in the License Plate.</p>';
 				html += '</ul>';
 			html += '</div>';
-		html += '</div>';		
+		html += '</div>';
+		html += '<div class="row"><div class="col-xs-12" align="center"><button class="btn btn-info" onclick="loadContactForm('+productID+');">Enquiry Product</button></div></div><BR><BR>';
 	}
 	else if(productID == 2)
 	{
 		html += '<div class="row"><div class="col-xs-12"><p class="lead redColor">Traffic Safety Systems</p></div></div>';
+		html += '<div class="row"><div class="col-xs-12" align="center"><button class="btn btn-info" onclick="loadContactForm('+productID+');">Enquiry Product</button></div></div><BR>';
 		html += '<div class="row">';
 			html += '<div class="col-xs-12">';
 				html += '<p>Road authorities have to contend with several challenges like rapidly growing vehicular traffic, challenging road & driving conditions and increased safety hazards. For over 60 years, 3M has pioneered the use of retro reflective technology in road safety and traffic management solutions to ensure safe, orderly and efficient movement of all road users and vehicles.</p>';
@@ -227,12 +253,12 @@ function loadProductsPage(productID)
 				html += '<p>3M\'s retro reflective sheeting solutions are extensively used to develop creative and thematic way-finding sign solutions which help facilitate safe, comfortable and informed travel which in turn enable the growth of tourism.</p>';
 			html += '</div>';
 		html += '</div>';
-		
+		html += '<div class="row"><div class="col-xs-12" align="center"><button class="btn btn-info" onclick="loadContactForm('+productID+');">Enquiry Product</button></div></div><BR><BR>';
 	}
 	else if(productID == 3)
 	{
 		html += '<div class="row"><div class="col-xs-12"><p class="lead redColor">Reflective Sign Boards & Sheets</p></div></div>';
-		
+		html += '<div class="row"><div class="col-xs-12" align="center"><button class="btn btn-info" onclick="loadContactForm('+productID+');">Enquiry Product</button></div></div><BR>';
 		html += '<div class="row">';
 			html += '<div class="col-xs-12">';
 				html += '<p>3M&#8482; Diamond Grade&#8482; Reflective Sheeting is state-of-the-art sheeting used for traffic control and guidance signs and devices. This highly reflective, durable, and visible sheeting meets a wide variety of sign visibility needs in all light and weather conditions and outperforms the competition when it really counts.</p>';				
@@ -284,10 +310,12 @@ function loadProductsPage(productID)
 				html += '<p>High visibility in various conditions - daytime, night, twilight and inclement weather, and excellent visibility at wide entrance and observation angles, makes the Fluorescent Yellow Sheeting 4081 conform to all color specifications for yellow traffic control signs and devices.</p><BR>';
 			html += '</div>';
 		html += '</div>';
+		html += '<div class="row"><div class="col-xs-12" align="center"><button class="btn btn-info" onclick="loadContactForm('+productID+');">Enquiry Product</button></div></div><BR><BR>';
 	}
 	else if(productID == 4)
 	{
 		html += '<div class="row"><div class="col-xs-12"><p class="lead redColor">Car Polishing products</p></div></div>';
+		html += '<div class="row"><div class="col-xs-12" align="center"><button class="btn btn-info" onclick="loadContactForm('+productID+');">Enquiry Product</button></div></div><BR>';
 		html += '<div class="row">';
 			html += '<div class="col-xs-12">';
 				html += '<p><b>Windshield Washer</b></p>';
@@ -345,10 +373,12 @@ function loadProductsPage(productID)
 				html += '<HR>';
 			html += '</div>';
 		html += '</div>';
+		html += '<div class="row"><div class="col-xs-12" align="center"><button class="btn btn-info" onclick="loadContactForm('+productID+');">Enquiry Product</button></div></div><BR><BR>';
 	}
 	else if(productID == 5)
 	{
 		html += '<div class="row"><div class="col-xs-12"><p class="lead redColor">Sun Control Film</p></div></div>';
+		html += '<div class="row"><div class="col-xs-12" align="center"><button class="btn btn-info" onclick="loadContactForm('+productID+');">Enquiry Product</button></div></div><BR>';
 		html += '<div class="row">';
 			html += '<div class="col-xs-12">';
 				html += '<ul>';
@@ -578,10 +608,12 @@ function loadProductsPage(productID)
 
 			html += '</div>';
 		html += '</div>';
+		html += '<div class="row"><div class="col-xs-12" align="center"><button class="btn btn-info" onclick="loadContactForm('+productID+');">Enquiry Product</button></div></div><BR><BR>';
 	}
 	else if(productID == 6)
 	{
 		html += '<div class="row"><div class="col-xs-12"><p class="lead redColor">Vehicle and Specialty Markings</p></div></div>';
+		html += '<div class="row"><div class="col-xs-12" align="center"><button class="btn btn-info" onclick="loadContactForm('+productID+');">Enquiry Product</button></div></div><BR>';
 		html += '<div class="row">';
 			html += '<div class="col-xs-12">';
 				html += '<p><b>3M&#8482; Conspicuity Markings for Truck and Trailers</b></p>';
@@ -669,10 +701,12 @@ function loadProductsPage(productID)
 				html += '<p align="center"><img class="img-responsive" src="http://tediindia.com/images/Egress.jpg" /></p>';
 			html += '</div>';
 		html += '</div>';
+		html += '<div class="row"><div class="col-xs-12" align="center"><button class="btn btn-info" onclick="loadContactForm('+productID+');">Enquiry Product</button></div></div><BR><BR>';
 	}
 	else if(productID == 7)
 	{
 		html += '<div class="row"><div class="col-xs-12"><p class="lead redColor">Acrylic Foam Tape</p></div></div>';
+		html += '<div class="row"><div class="col-xs-12" align="center"><button class="btn btn-info" onclick="loadContactForm('+productID+');">Enquiry Product</button></div></div><BR>';
 		html += '<div class="row">';
 			html += '<div class="col-xs-12">';
 				html += '<p><b>3M&#8482; Pressure Sensitive Acrylic Foam Tape 5344, Gray, 1.14 mm</b></p>';
@@ -698,6 +732,7 @@ function loadProductsPage(productID)
 				html += '<p>3M AFT 5356 is thicker than other acrylic foam tapes and is used where there is greater mismatch between the trim part and the sheet metal of the vehicle. Typical applications for 3M AFT 5356 include attachment of body side moldings, claddings, roof ditch moldings, wheel flares, and tailgate appliques. The acrylic foam core has unique viscoelastic properties that allow it to elongate and relax when put under load, thereby minimizing stress on the adhesive bond line. 3M AFT 5356 has AR-7 adhesive on both sides of the product for a high level of adhesion to both the automotive paint and the exterior trim part. Since product performance will depend on actual conditions within a specific application, it is essential that the user evaluate the 3M product to determine whether it is fit for a particular material purpose and suitable for the user\'s method of application.</p>';
 			html += '</div>';
 		html += '</div>';
+		html += '<div class="row"><div class="col-xs-12" align="center"><button class="btn btn-info" onclick="loadContactForm('+productID+');">Enquiry Product</button></div></div><BR><BR>';
 	}
 
 	document.getElementById('pageContent').innerHTML = html;
@@ -726,12 +761,77 @@ function loadContactPage()
 				html += 'Phone: +1 800 603 6035<BR>';
 				html += 'Email: info@tediindia.com<BR><BR>';
 				html += '<a href="tel:+1 800 603 6035"><button type="button" class="btn btn-success btn-md"><span class="glyphicon glyphicon-earphone"></span>&nbsp;Call</button></a>&nbsp;';
-				html += '<a href="mailto:info@tediindia.com"><button type="button" class="btn btn-success btn-md"><span class="glyphicon glyphicon-envelope"></span>&nbsp;Email</button></a>';
+				html += '<a href="#" onclick="loadContactForm(-1);"><button type="button" class="btn btn-success btn-md"><span class="glyphicon glyphicon-envelope"></span>&nbsp;Email</button></a>';
 			html += '</address>';
-		html += '</div>';
+		html += '</div>';		
 	html += '</div>';
 
 	document.getElementById('backButton').style.display = '';
 	document.getElementById('hiddenCurrentPageID').value = 5;
 	document.getElementById('pageContent').innerHTML = html;
+}
+
+function loadContactForm(productID)
+{
+	var html = '';
+	html += '<div class="row">';
+		html += '<div class="col-xs-12">';
+			html += '<form role="form">';
+			  html += '<div class="form-group">';
+				html += '<label for="inputName">Name</label>';
+				html += '<input type="text" class="form-control" id="inputName" placeholder="Name">';
+			  html += '</div>';
+			  html += '<div class="form-group">';
+				html += '<label for="inputEmail">Email</label>';
+				html += '<input type="email" class="form-control" id="inputEmail" placeholder="Email">';
+			  html += '</div>';
+			  html += '<div class="form-group">';
+				html += '<label for="inputProducts">Select Products</label>';
+				html += '<select id="inputProducts" class="form-control">';
+					html += '<option value="-1">Select Product</option>';
+					html += '<option value="1">IND Number Plate</option>';
+					html += '<option value="6">Vehicle Conspicuity Tapes</option>';
+					html += '<option value="3">Reflective Sign Boards & Sheets</option>';
+					html += '<option value="4">Car Polishing products</option>';
+					html += '<option value="7">Acrylic Foam Tapes</option>';
+					html += '<option value="5">Sun Control Film</option>';
+					html += '<option value="2">Traffic Safety Systems</option>';
+				html += '</select>';
+			  html += '</div>';
+			  html += '<div class="form-group">';
+				html += '<label for="inputMessage">Message</label>';
+				html += '<textarea id="inputMessage" placeholder="Message" class="form-control"></textarea>';
+			  html += '</div>';
+			  html += '<button type="button" class="btn btn-success" onclick="sendEmail();">Send</button>';
+			html += '</form>';
+		html += '</div>';
+	html += '</div>';
+
+	document.getElementById('backButton').style.display = '';
+	document.getElementById('hiddenCurrentPageID').value = 8;
+	document.getElementById('pageContent').innerHTML = html;
+
+	if(productID > 0) {
+		for(i=1; i<=7; i++)
+		{
+			if(document.getElementById('inputProducts').options[i].value == productID)
+			{
+				document.getElementById('inputProducts').selectedIndex = i;
+			}
+		}
+	}
+}
+
+function sendEmail()
+{
+	var name = document.getElementById('inputName').value;
+	var email = document.getElementById('inputEmail').value;
+	var index = document.getElementById('inputProducts').selectedIndex;
+	var productName = document.getElementById('inputProducts').options[index].text;
+	var msg = document.getElementById('inputMessage').value;
+	var message = "Name: " + name + "<BR>";
+	message += "Email: " + email + "<BR>";
+	message += "Product: " + productName + "<BR>";
+	message += "Message: " + msg + "<BR>";
+	document.location.href = "mailto:info@tediindia.com?subject=Enquiry through website&body="+message;
 }

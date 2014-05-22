@@ -9,7 +9,7 @@ function loadMainPage()
 		html += '<div class="col-xs-10 col-xs-offset-1 col-md-10 col-md-offset-1" align="center">';
 			//html += '<div class="rectangle-box" onclick="loadHomePage();"><div class="rectangle-content"><div><span class="glyphicon glyphicon-home"></span></div></div></div><BR>';
 			html += '<div class="panel panel-default curHand" style="background-color:#D43400;color:white;" onclick="loadProductsPage(1, 2);"><div class="panel-body">IND Number Plates</div></div>';
-			html += '<div class="panel panel-default curHand" style="background-color:#D43400;color:white;" onclick="loadProductsPage(1, 2);"><div class="panel-body">Vehicle Conspicuity Tapes</div></div>';
+			html += '<div class="panel panel-default curHand" style="background-color:#D43400;color:white;" onclick="loadProductsPage(6, 2);"><div class="panel-body">Vehicle Conspicuity Tapes</div></div>';
 			html += '<div class="panel panel-default curHand" style="background-color:#D43400;color:white;" onclick="loadProductsPage(3, 2);"><div class="panel-body">Reflective Sign Boards</div></div>';
 			html += '<div class="panel panel-default curHand" style="background-color:#D43400;color:white;" onclick="loadProductsPage(4, 2);"><div class="panel-body">Car Polish Products</div></div>';
 			html += '<div class="panel panel-default curHand" style="background-color:#D43400;color:white;" onclick="loadProductsPage(7, 2);"><div class="panel-body">AFT Tapes</div></div>';
@@ -320,7 +320,7 @@ function loadProductsPage(productID, fromReq)
 			html += '<div class="col-xs-12">';
 				html += '<p><b>Windshield Washer</b></p>';
 				html += '<p>Windshield Washer removes stains of dirt, greasy and oily substances and thereby makes Windshield more shiny and glossy. Its unique preparation lessens any irritation during application.<BR></p>';
-				html += '<p align="center"><img class="img-responsive" src="http://tediindia.com/images/ww.jpg" /></p>';
+				html += '<p align="center"><img class="img-responsive" src="http://www.tediindia.com/images/ww1.jpg" /></p>';
 				html += '<p><b>Directions for use:</b></p>';
 				html += '<p>Pour the content into the windshield wiper reservoir. Add required quantity of clean water to the reservoir. Shake well before use.<BR></p>';
 				html += '<p><b>Cautions</b></p>';
@@ -338,7 +338,7 @@ function loadProductsPage(productID, fromReq)
 
 				html += '<p><b>Vinyl & plastic Dresser</b></p>';
 				html += '<p>Vinyl & plastic Dresser makes vinyl and plastic surfaces more shiny and glossy. Water based preparation avoids any corrosion by dresser application. It helps for finished look for all after sale services of all automobiles.<BR></p>';
-				html += '<p align="center"><img class="img-responsive" src="http://tediindia.com/images/car-interior.jpg" /></p>';
+				html += '<p align="center"><img class="img-responsive" src="http://www.tediindia.com/images/car-interior1.jpg" /></p>';
 				html += '<p><b>Directions for use:</b></p>';
 				html += '<p>Use a fine spray bottle for optimum usage. Spray on rubber and vinyl surfaces and gently wipe by a sponge. When spraying is not applicable, spray on sponge and then apply on the surfaces. For external use only and no dilution is needed. Shake well before use.<BR></p>';
 				html += '<p><b>Cautions</b></p>';
@@ -356,7 +356,7 @@ function loadProductsPage(productID, fromReq)
 
 				html += '<p><b>Interior cleaner</b></p>';
 				html += '<p>Interior cleaner removes stains of dirt, greasy and oily substances from car Upholstery, vinyl & plastic surfaces. Its unique preparation lessens any irritation during application.<BR></p>';
-				html += '<p align="center"><img class="img-responsive" src="http://tediindia.com/images/interior.jpg" /></p>';
+				html += '<p align="center"><img class="img-responsive" src="http://www.tediindia.com/images/interior1.jpg" /></p>';
 				html += '<p><b>Directions for use:</b></p>';
 				html += '<p>Use a measuring bucket for optimum usage. Diluteit in 1: 10 ratio with water. Gently spray & brush up the area. Use absorbing cloth for ?ne wiping. For external use only and dilution is needed. Shake well before use.<BR></p>';
 				html += '<p><b>Cautions</b></p>';
@@ -365,7 +365,7 @@ function loadProductsPage(productID, fromReq)
 
 				html += '<p><b>Tyre Dresser</b></p>';
 				html += '<p>Tyre Dresser makes rubber and vinyl surfaces more shiny and glossy. Water based preparation avoids any corrosion by dresser application.It helps for finished look for all after sale services of all type automobiles.<BR></p>';
-				html += '<p align="center"><img class="img-responsive" src="http://tediindia.com/images/tyreDresser.jpg" /></p>';
+				html += '<p align="center"><img class="img-responsive" src="http://www.tediindia.com/images/tyreDresser1.jpg" /></p>';
 				html += '<p><b>Directions for use:</b></p>';
 				html += '<p>Use a fine spray bottle for optimum usage. Spray on rubber and vinyl surfaces and gently wipe by a sponge. When spraying is not applicable, spray on sponge and then apply on the surfaces. For external use only and no dilution is needed. Shake well before use.<BR></p>';
 				html += '<p><b>Cautions</b></p>';
@@ -787,7 +787,7 @@ function loadContactForm(productID)
 			  html += '</div>';
 			  html += '<div class="form-group">';
 				html += '<label for="inputProducts">Select Products</label>';
-				html += '<select id="inputProducts" class="form-control">';
+				html += '<select id="inputProducts" class="form-control" onchange="selectSubProducts();">';
 					html += '<option value="-1">Select Product</option>';
 					html += '<option value="1">IND Number Plate</option>';
 					html += '<option value="6">Vehicle Conspicuity Tapes</option>';
@@ -796,6 +796,11 @@ function loadContactForm(productID)
 					html += '<option value="7">Acrylic Foam Tapes</option>';
 					html += '<option value="5">Sun Control Film</option>';
 					html += '<option value="2">Traffic Safety Systems</option>';
+				html += '</select>';
+			  html += '</div>';
+			  html += '<div class="form-group" id="divSubProducts" style="display:none">';
+				html += '<label for="inputSubProducts" id="labelSubProducts">Select Types</label>';
+				html += '<select id="inputSubProducts" class="form-control">';
 				html += '</select>';
 			  html += '</div>';
 			  html += '<div class="form-group">';
@@ -817,21 +822,81 @@ function loadContactForm(productID)
 			if(document.getElementById('inputProducts').options[i].value == productID)
 			{
 				document.getElementById('inputProducts').selectedIndex = i;
+				selectSubProducts();
 			}
 		}
+	}
+}
+
+function selectSubProducts()
+{
+	var subProducts;
+	var index = document.getElementById('inputProducts').selectedIndex;
+	var productID = document.getElementById('inputProducts').options[index].value;
+	document.getElementById('divSubProducts').style.display = '';
+	if(productID == 1) {
+		subProducts = Array('Select', 'Bike IND', 'Car IND');
+	} else if(productID == 6) {
+		subProducts = Array('Select', '2" Red', '2" White', '2" Yellow', '1" Red', '1" White');
+	} else if(productID == 3) {
+		subProducts = Array('Select', 'White', 'Yellow', 'Red', 'Orange', 'Blue', 'Green');
+	} else if(productID == 4) {
+		subProducts = Array('Select', 'Tyre Polish', 'Car Shampoo', 'Vinyal & Plastic Dresses', 'All Purpose Cleaner', 'Glass Cleaner', 'Windscreen washer');
+	} else if(productID == 7) {
+		subProducts = Array('Select', '12mm x 4mm', '24mm x 4mm', '12mm x 10 mm', '24mm x 10 mm');
+	} else {
+		document.getElementById('divSubProducts').style.display = 'none';
+		return false;
+	}	
+	
+	document.getElementById('inputSubProducts').options.length = 0;
+	for (var i = 0; i<subProducts.length; i++){
+		var opt = document.createElement('option');
+		opt.value = i;
+		opt.innerHTML = subProducts[i];
+		document.getElementById('inputSubProducts').appendChild(opt);
 	}
 }
 
 function sendEmail()
 {
 	var name = document.getElementById('inputName').value;
+	if(name == "") {
+		alert("Name can't be empty");
+		document.getElementById('inputName').focus();
+		return false;
+	}
 	var email = document.getElementById('inputEmail').value;
+	if(email == "") {
+		alert("Email can't be empty");
+		document.getElementById('inputEmail').focus();
+		return false;
+	}
 	var index = document.getElementById('inputProducts').selectedIndex;
+	if(index == 0) {
+		alert('Please select the product');
+		return false;
+	}
+	var productID = document.getElementById('inputProducts').options[index].value;
 	var productName = document.getElementById('inputProducts').options[index].text;
-	var msg = document.getElementById('inputMessage').value;
 	var message = "Name: " + name + "<BR>";
 	message += "Email: " + email + "<BR>";
 	message += "Product: " + productName + "<BR>";
+	if(productID == 1 || productID == 3 || productID == 4 || productID == 6 || productID == 7) {
+		var index = document.getElementById('inputSubProducts').selectedIndex;
+		if(index == 0) {
+			alert('Please select the type');
+			return false;
+		}
+		var type = document.getElementById('inputSubProducts').options[index].text;
+		message += "Types: " + type + "<BR>";
+	}
+	var msg = document.getElementById('inputMessage').value;
+	if(msg == "") {
+		alert("Message can't be empty");
+		document.getElementById('inputMessage').focus();
+		return false;
+	}
 	message += "Message: " + msg + "<BR>";
 	document.location.href = "mailto:info@tediindia.com?subject=Enquiry through website&body="+message;
 }

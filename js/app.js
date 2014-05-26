@@ -800,7 +800,7 @@ function loadContactForm(productID)
 			  html += '</div>';
 			  html += '<div class="form-group" id="divSubProducts" style="display:none">';
 				html += '<label for="inputSubProducts" id="labelSubProducts">Select Types</label>';
-				html += '<select id="inputSubProducts" class="form-control">';
+				html += '<select id="inputSubProducts" class="form-control" multiple>';
 				html += '</select>';
 			  html += '</div>';
 			  html += '<div class="form-group">';
@@ -835,15 +835,15 @@ function selectSubProducts()
 	var productID = document.getElementById('inputProducts').options[index].value;
 	document.getElementById('divSubProducts').style.display = '';
 	if(productID == 1) {
-		subProducts = Array('Select', 'Bike IND', 'Car IND');
+		subProducts = Array('Bike IND', 'Bike IND Blue', 'Car IND', 'Car IND Blue');
 	} else if(productID == 6) {
-		subProducts = Array('Select', '2" Red', '2" White', '2" Yellow', '1" Red', '1" White');
+		subProducts = Array('2" Red', '2" White', '2" Yellow', '1" Red', '1" White');
 	} else if(productID == 3) {
-		subProducts = Array('Select', 'White', 'Yellow', 'Red', 'Orange', 'Blue', 'Green');
+		subProducts = Array('White', 'Yellow', 'Red', 'Orange', 'Blue', 'Green');
 	} else if(productID == 4) {
-		subProducts = Array('Select', 'Tyre Polish', 'Car Shampoo', 'Vinyal & Plastic Dresses', 'All Purpose Cleaner', 'Glass Cleaner', 'Windscreen washer');
+		subProducts = Array('Tyre Polish - 100 ml', 'Tyre Polish - 200 ml', 'Car Shampoo - 100 ml', 'Car Shampoo - 200 ml', 'Vinyal & Plastic Dresses - 100 ml', 'Vinyal & Plastic Dresses - 200 ml', 'All Purpose Cleaner - 100 ml', 'All Purpose Cleaner - 200 ml', 'Glass Cleaner - 100 ml', 'Glass Cleaner - 200 ml', 'Windscreen washer - 350 ml');
 	} else if(productID == 7) {
-		subProducts = Array('Select', '12mm x 4mm', '24mm x 4mm', '12mm x 10 mm', '24mm x 10 mm');
+		subProducts = Array('12mm x 4mm', '24mm x 4mm', '12mm x 10 mm', '24mm x 10 mm');
 	} else {
 		document.getElementById('divSubProducts').style.display = 'none';
 		return false;

@@ -879,17 +879,30 @@ function sendEmail()
 	}
 	var productID = document.getElementById('inputProducts').options[index].value;
 	var productName = document.getElementById('inputProducts').options[index].text;
-	var message = "Name: " + name + "<BR>";
-	message += "Email: " + email + "<BR>";
-	message += "Product: " + productName + "<BR>";
+	var message = "Name: " + name + "%0D%0A";
+	message += "Email: " + email + "%0D%0A";
+	message += "Product: " + productName + "%0D%0A";
 	if(productID == 1 || productID == 3 || productID == 4 || productID == 6 || productID == 7) {
-		var index = document.getElementById('inputSubProducts').selectedIndex;
-		if(index == 0) {
-			alert('Please select the type');
+		//var index = document.getElementById('inputSubProducts').selectedIndex;
+		oSelect=document.getElementById("inputSubProducts");
+		var count=0;
+		var type = "";
+		for(var i=0;i<oSelect.options.length;i++){
+		   if(oSelect.options[i].selected)
+			{
+				 count++;
+				if(type != "") {
+					type += ", ";
+				}
+			   type += document.getElementById('inputSubProducts').options[i].text;
+			}
+		 }
+		if(count < 1) {
+			alert('Must select at least one type');
 			return false;
 		}
-		var type = document.getElementById('inputSubProducts').options[index].text;
-		message += "Types: " + type + "<BR>";
+		//var type = document.getElementById('inputSubProducts').options[index].text;
+		message += "Types: " + type + "%0D%0A";
 	}
 	var msg = document.getElementById('inputMessage').value;
 	if(msg == "") {
@@ -897,6 +910,6 @@ function sendEmail()
 		document.getElementById('inputMessage').focus();
 		return false;
 	}
-	message += "Message: " + msg + "<BR>";
+	message += "Message: " + msg + "%0D%0A";
 	document.location.href = "mailto:info@tediindia.com?subject=Enquiry through website&body="+message;
 }

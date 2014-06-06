@@ -786,6 +786,10 @@ function loadContactForm(productID)
 				html += '<input type="email" class="form-control" id="inputEmail" placeholder="Email">';
 			  html += '</div>';
 			  html += '<div class="form-group">';
+				html += '<label for="inputMobile">Contact Number</label>';
+				html += '<input type="text" class="form-control" id="inputMobile" placeholder="Contact Number">';
+			  html += '</div>';
+			  html += '<div class="form-group">';
 				html += '<label for="inputProducts">Select Products</label>';
 				html += '<select id="inputProducts" class="form-control" onchange="selectSubProducts();">';
 					html += '<option value="-1">Select Product</option>';
@@ -802,6 +806,10 @@ function loadContactForm(productID)
 				html += '<label for="inputSubProducts" id="labelSubProducts">Select Types</label>';
 				html += '<select id="inputSubProducts" class="form-control" multiple>';
 				html += '</select>';
+			  html += '</div>';
+			  html += '<div class="form-group">';
+				html += '<label for="inputQty">Quantity</label>';
+				html += '<input type="text" class="form-control" id="inputQty" placeholder="Quantity">';
 			  html += '</div>';
 			  html += '<div class="form-group">';
 				html += '<label for="inputMessage">Message</label>';
@@ -841,7 +849,7 @@ function selectSubProducts()
 	} else if(productID == 3) {
 		subProducts = Array('White', 'Yellow', 'Red', 'Orange', 'Blue', 'Green');
 	} else if(productID == 4) {
-		subProducts = Array('Tyre Polish - 100 ml', 'Tyre Polish - 200 ml', 'Car Shampoo - 100 ml', 'Car Shampoo - 200 ml', 'Vinyal & Plastic Dresses - 100 ml', 'Vinyal & Plastic Dresses - 200 ml', 'All Purpose Cleaner - 100 ml', 'All Purpose Cleaner - 200 ml', 'Glass Cleaner - 100 ml', 'Glass Cleaner - 200 ml', 'Windscreen washer - 350 ml');
+		subProducts = Array('Tyre Polish - 100 ml', 'Tyre Polish - 200 ml', 'Car Shampoo - 100 ml', 'Car Shampoo - 200 ml', 'Vinyal and Plastic Dresses - 100 ml', 'Vinyal and Plastic Dresses - 200 ml', 'All Purpose Cleaner - 100 ml', 'All Purpose Cleaner - 200 ml', 'Glass Cleaner - 100 ml', 'Glass Cleaner - 200 ml', 'Windscreen washer - 350 ml');
 	} else if(productID == 7) {
 		subProducts = Array('12mm x 4mm', '24mm x 4mm', '12mm x 10 mm', '24mm x 10 mm');
 	} else {
@@ -872,6 +880,12 @@ function sendEmail()
 		document.getElementById('inputEmail').focus();
 		return false;
 	}
+	var mobile = document.getElementById('inputMobile').value;
+	if(email == "") {
+		alert("Mobile number can't be empty");
+		document.getElementById('inputMobile').focus();
+		return false;
+	}
 	var index = document.getElementById('inputProducts').selectedIndex;
 	if(index == 0) {
 		alert('Please select the product');
@@ -879,8 +893,10 @@ function sendEmail()
 	}
 	var productID = document.getElementById('inputProducts').options[index].value;
 	var productName = document.getElementById('inputProducts').options[index].text;
+	var qty = document.getElementById('inputQty').value;
 	var message = "Name: " + name + "%0D%0A";
 	message += "Email: " + email + "%0D%0A";
+	message += "Contact No. " + mobile + "%0D%0A";
 	message += "Product: " + productName + "%0D%0A";
 	if(productID == 1 || productID == 3 || productID == 4 || productID == 6 || productID == 7) {
 		//var index = document.getElementById('inputSubProducts').selectedIndex;
@@ -903,6 +919,7 @@ function sendEmail()
 		}
 		//var type = document.getElementById('inputSubProducts').options[index].text;
 		message += "Types: " + type + "%0D%0A";
+		message += "Quantity: " + qty + "%0D%0A";
 	}
 	var msg = document.getElementById('inputMessage').value;
 	if(msg == "") {
@@ -911,5 +928,5 @@ function sendEmail()
 		return false;
 	}
 	message += "Message: " + msg + "%0D%0A";
-	document.location.href = "mailto:info@tediindia.com?subject=Enquiry through website&body="+message;
+	document.location.href = "mailto:info@tediindia.com,sktgthill@gmail.com?subject=Enquiry through website&body="+message;
 }

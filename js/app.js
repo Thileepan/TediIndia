@@ -109,7 +109,7 @@ function loadProductListPage()
 			html += '<div class="list-group">';
 				html += '<a href="#" class="list-group-item" onclick="loadProductsPage(1, 1);">IND Number Plate</a>';
 				html += '<a href="#" class="list-group-item" onclick="loadProductsPage(6, 1);">Vehicle Conspicuity Tapes</a>';
-				html += '<a href="#" class="list-group-item" onclick="loadProductsPage(3, 1);">Reflective Sign Boards & Sheets</a>';
+				html += '<a href="#" class="list-group-item" onclick="loadProductsPage(3, 1);">Reflective Sign Boards and Sheets</a>';
 				html += '<a href="#" class="list-group-item" onclick="loadProductsPage(4, 1);">Car Polishing products</a>';
 				html += '<a href="#" class="list-group-item" onclick="loadProductsPage(7, 1);">Acrylic Foam Tapes</a>';
 				html += '<a href="#" class="list-group-item" onclick="loadProductsPage(5, 1);">Sun Control Film</a>';
@@ -795,7 +795,7 @@ function loadContactForm(productID)
 					html += '<option value="-1">Select Product</option>';
 					html += '<option value="1">IND Number Plate</option>';
 					html += '<option value="6">Vehicle Conspicuity Tapes</option>';
-					html += '<option value="3">Reflective Sign Boards & Sheets</option>';
+					html += '<option value="3">Reflective Sign Boards and Sheets</option>';
 					html += '<option value="4">Car Polishing products</option>';
 					html += '<option value="7">Acrylic Foam Tapes</option>';
 					html += '<option value="5">Sun Control Film</option>';
@@ -803,14 +803,14 @@ function loadContactForm(productID)
 				html += '</select>';
 			  html += '</div>';
 			  html += '<div class="form-group" id="divSubProducts" style="display:none">';
-				html += '<label for="inputSubProducts" id="labelSubProducts">Select Types</label>';
-				html += '<select id="inputSubProducts" class="form-control" multiple>';
-				html += '</select>';
+				//html += '<label for="inputSubProducts" id="labelSubProducts">Select Types</label>';
+				//html += '<select id="inputSubProducts" class="form-control" multiple>';
+				//html += '</select>';
 			  html += '</div>';
-			  html += '<div class="form-group">';
-				html += '<label for="inputQty">Quantity</label>';
-				html += '<input type="text" class="form-control" id="inputQty" placeholder="Quantity">';
-			  html += '</div>';
+			  //html += '<div class="form-group">';
+				//html += '<label for="inputQty">Quantity</label>';
+				//html += '<input type="text" class="form-control" id="inputQty" placeholder="Quantity">';
+			  //html += '</div>';
 			  html += '<div class="form-group">';
 				html += '<label for="inputMessage">Message</label>';
 				html += '<textarea id="inputMessage" placeholder="Message" class="form-control"></textarea>';
@@ -845,7 +845,7 @@ function selectSubProducts()
 	if(productID == 1) {
 		subProducts = Array('Bike IND', 'Bike IND Blue', 'Car IND', 'Car IND Blue');
 	} else if(productID == 6) {
-		subProducts = Array('2" Red', '2" White', '2" Yellow', '1" Red', '1" White');
+		subProducts = Array('2-inch Red', '2-inch White', '2-inch Yellow', '1-inch Red', '1-inch White');
 	} else if(productID == 3) {
 		subProducts = Array('White', 'Yellow', 'Red', 'Orange', 'Blue', 'Green');
 	} else if(productID == 4) {
@@ -857,12 +857,20 @@ function selectSubProducts()
 		return false;
 	}	
 	
-	document.getElementById('inputSubProducts').options.length = 0;
+	var html = '<label for="inputSubProducts" id="labelSubProducts">Select Types</label><BR>';
 	for (var i = 0; i<subProducts.length; i++){
-		var opt = document.createElement('option');
-		opt.value = i;
-		opt.innerHTML = subProducts[i];
-		document.getElementById('inputSubProducts').appendChild(opt);
+		html += '<div class="span6" id="divSubProductsChkBox-'+i+ '"><input type="checkbox" id="inputSubProductChkBox-'+i+'" onclick="showOrHideQuantityDiv(this, '+ i +');" value="' + subProducts[i] + '" />&nbsp;' + subProducts[i] + '</div><div class="span6" id="divQuantity-'+i+ '" style="display:none"><input type="text" placeholder="Quantity" id="inputQuantity-'+i+'" /></div>';
+	}
+
+	document.getElementById('divSubProducts').innerHTML = html;
+}
+
+function showOrHideQuantityDiv(obj, i)
+{
+	if(obj.checked) {
+		document.getElementById('divQuantity-' + i).style.display = '';
+	} else {
+		document.getElementById('divQuantity-' + i).style.display = 'none';
 	}
 }
 
@@ -893,33 +901,40 @@ function sendEmail()
 	}
 	var productID = document.getElementById('inputProducts').options[index].value;
 	var productName = document.getElementById('inputProducts').options[index].text;
-	var qty = document.getElementById('inputQty').value;
+	//var qty = document.getElementById('inputQty').value;
 	var message = "Name: " + name + "%0D%0A";
 	message += "Email: " + email + "%0D%0A";
 	message += "Contact No. " + mobile + "%0D%0A";
 	message += "Product: " + productName + "%0D%0A";
 	if(productID == 1 || productID == 3 || productID == 4 || productID == 6 || productID == 7) {
-		//var index = document.getElementById('inputSubProducts').selectedIndex;
-		oSelect=document.getElementById("inputSubProducts");
 		var count=0;
 		var type = "";
-		for(var i=0;i<oSelect.options.length;i++){
-		   if(oSelect.options[i].selected)
+		var quantity = "";
+		var y = 0;
+		var collection = document.getElementById('divSubProducts').getElementsByTagName('INPUT');
+		for (var x=0; x<collection.length; x++)
+		{
+			if (collection[x].type.toUpperCase()=='CHECKBOX')
 			{
-				 count++;
-				if(type != "") {
-					type += ", ";
+				if(collection[x].checked)
+				{
+					count++;
+					type += collection[x].value;
+					var id = 'inputQuantity-' + y;
+					type += ' - (';
+					type += document.getElementById(id).value;
+					type += ')';
+					type += '%0D%0A';					
 				}
-			   type += document.getElementById('inputSubProducts').options[i].text;
+				y++;
 			}
-		 }
+		}
+
 		if(count < 1) {
 			alert('Must select at least one type');
 			return false;
 		}
-		//var type = document.getElementById('inputSubProducts').options[index].text;
 		message += "Types: " + type + "%0D%0A";
-		message += "Quantity: " + qty + "%0D%0A";
 	}
 	var msg = document.getElementById('inputMessage').value;
 	if(msg == "") {
@@ -928,5 +943,7 @@ function sendEmail()
 		return false;
 	}
 	message += "Message: " + msg + "%0D%0A";
+	//console.log(message);
+	//return false;
 	document.location.href = "mailto:info@tediindia.com,sktgthill@gmail.com?subject=Enquiry through website&body="+message;
 }
